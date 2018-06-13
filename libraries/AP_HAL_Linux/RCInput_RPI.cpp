@@ -52,12 +52,7 @@ static uint16_t RcChnGpioTbl[RCIN_RPI_CHN_NUM] = {
 #define RCIN_RPI_SIG_HIGH        1
 #define RCIN_RPI_SIG_LOW         0
 static uint16_t RcChnGpioTbl[RCIN_RPI_CHN_NUM] = {
-#if CONFIG_HAL_BOARD_SUBTYPE == HAL_BOARD_SUBTYPE_LINUX_NAVIO
-#define PAGE_SIZE           (4*1024)
-    NAVIO_GPIO_PPM_IN
-#else
     RPI_GPIO_4
-#endif
 };
 #endif // CONFIG_HAL_BOARD_SUBTYPE
 
