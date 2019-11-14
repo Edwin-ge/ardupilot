@@ -38,7 +38,7 @@ namespace Linux {
 void *Thread::_run_trampoline(void *arg)
 {
     Thread *thread = static_cast<Thread *>(arg);
-    thread->_poison_stack();
+    //thread->_poison_stack();
     thread->_run();
 
     if (thread->_auto_free) {
